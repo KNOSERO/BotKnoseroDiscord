@@ -1,0 +1,25 @@
+{
+  "name": "botknoserodiscord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./scr/index.js",
+  "scripts": {
+    "dev": "nodemon ./scr/index.js",
+    "start": "node ./scr/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KNOSERO/BotKnoseroDiscord.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KNOSERO/BotKnoseroDiscord/issues"
+  },
+  "homepage": "https://github.com/KNOSERO/BotKnoseroDiscord#readme",
+  "dependencies": {
+    "discord.js": "^13.2.0",
+    "nodemon": "^2.0.13"
+  }
+}
