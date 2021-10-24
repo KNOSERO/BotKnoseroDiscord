@@ -27,7 +27,7 @@ module.exports = {
 	            .setTitle(key);
 
             let newDescription = "```\n"
-            for(const mem of groupmeme[key]) {
+            for(const mem of groupmeme[key].sort((a,b) => a.name.localeCompare(b.name))) {
                 newDescription += `${mem.name}\n`;
             }
             newDescription += "```";
