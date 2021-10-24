@@ -19,23 +19,25 @@ module.exports = {
         }
 
         const groupmeme = groupArray(memelist, 'group');
-
-        const listEmbed = [];
+        
+        const exampleEmbed = new MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle('Lista memów');
+        
+        let description = '';
         for(const key of Object.keys(groupmeme).sort()) {
-            const exampleEmbed = new MessageEmbed()
-	            .setColor('#0099ff')
-	            .setTitle(key);
 
-            let newDescription = "```\n"
+            let newDescription = `**${key}**\n` + "```\n"
             for(const mem of groupmeme[key].sort((a,b) => a.name.localeCompare(b.name))) {
                 newDescription += `${mem.name}\n`;
             }
-            newDescription += "```";
-            exampleEmbed.setDescription(newDescription);
-            listEmbed.push(exampleEmbed);
+            newDescription += "```\n";
+            description += newDescription;
         }
+        exampleEmbed.setDescription(description);
+        
         await interaction.reply({
-            embeds: listEmbed,
+            embeds: [exampleEmbed],
             ephemeral: true
         });
     }
