@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('meme')
-        .setDescription('dsad')
+        .setDescription('Wyświtlanie określonego mema')
         .addStringOption(name => 
             name.setName('name')
                 .setDescription('Nazwa nowego mema')
