@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('random')
-        .setDescription('dsad'),
+        .setDescription('Wyświetla randomowego mema'),
 
     async run(interaction, client) {
         const memelist = await client.MemesDB.RandomMeme();

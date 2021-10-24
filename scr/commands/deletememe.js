@@ -4,7 +4,7 @@ const { ADMINID } = require("../config");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('deletememe')
-        .setDescription('dsad')
+        .setDescription('Usuwa określony mem')
         .addStringOption(name => 
             name.setName('name')
                 .setDescription('Nazwa nowego mema')

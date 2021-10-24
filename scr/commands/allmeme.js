@@ -5,7 +5,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('allmeme')
-        .setDescription('dsad'),
+        .setDescription('Wyświetla liste memów'),
 
     async run(interaction, client) {
         const memelist = await client.MemesDB.AllMeme();
